@@ -11,12 +11,12 @@ public class SwapTwoElements {
         swapTwoElements(arr2,0,2);
     }
 
-    public static void swapTwoElements(Object[] arr, int n1, int n2){
-
+    //Переделал на Т :))
+    public static <T> void swapTwoElements(T[] arr, int n1, int n2){
         System.out.println("Исходный массив: " + Arrays.toString(arr));
-        Object obj = arr[n1];
+        T t = arr[n1];
         arr[n1] = arr[n2];
-        arr[n2] = obj;
+        arr[n2] = t;
         System.out.println("Итоговый массив: " + Arrays.toString(arr) + "\n");
     }
 }

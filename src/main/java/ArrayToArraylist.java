@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ArrayToArraylist {
@@ -13,9 +12,14 @@ public class ArrayToArraylist {
         arrayToArraylist(arr2);
     }
 
-    private static <T> void arrayToArraylist(T [] arr) {
-
-        List<T> list = new ArrayList<>(Arrays.asList(arr));
-        System.out.println("Arraylist: " + list.toString() + ", " + list.getClass());
+    private static <T> List<T> arrayToArraylist(T [] arr) {
+        // IntelliJ тут мне сам предложил сделать запись короче и сократил код :)) Я не виноват!
+        List<T> list = new ArrayList<>();
+        for (T obj: arr) {
+            list.add(obj);
+        }
+        System.out.println(list.toString());
+        System.out.println(list.getClass());
+        return list;
     }
 }

@@ -9,12 +9,12 @@ public class Box <T extends Fruit> {
     public final float getWeight() {
         float result = 0.0f;
         for (Fruit fr : box) {
-            result += fr.getWeight();
+            result += fr.getWeight(); // тут сложение всех фруктов в ящике, умножения не было :(
         }
         return result;
     }
 
-    public final boolean compare(Box anotherBox) {
+    public final boolean compare(Box<? extends Fruit> anotherBox) {
         return (this.getWeight() - anotherBox.getWeight()) < 0.0001;
     }
 
