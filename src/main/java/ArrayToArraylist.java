@@ -13,7 +13,6 @@ public class ArrayToArraylist {
     }
 
     private static <T> List<T> arrayToArraylist(T [] arr) {
-        // IntelliJ тут мне сам предложил сделать запись короче и сократил код :)) Я не виноват!
         List<T> list = new ArrayList<>();
         for (T obj: arr) {
             list.add(obj);
