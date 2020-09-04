@@ -128,7 +128,7 @@ public class ClientHandler {
                             String[] newUser = clientStr.split("\\s");
                             if (newUser.length == 4) {
                                 usersDAO.addUserToBD(newUser[1], newUser[2], newUser[3]);
-                                sendMsg("Пользователь с ником " + newUser[3] + "добавлен в базу");
+                                sendMsg("Пользователь с ником " + newUser[3] + " добавлен в базу");
                             } else {
                                 sendMsg("Неверный формат воода пользователя");
                             }
@@ -136,14 +136,14 @@ public class ClientHandler {
                             sendMsg("Авторизация пользователей доступна только Администратору");
                         }
                     } else {
-                        sendMsg("Вы ввели неверную команду2");
+                        sendMsg("Вы ввели неверную команду");
                     }
                 } else {
                     server.broadcastMsg(nick + ": " + clientStr);
                 }
             }
         } catch (IOException | SQLException e) {
-            sendMsg("Вы ввели неверную команду1");
+            sendMsg("Вы ввели неверную команду");
             sendMsg(String.valueOf(e.getStackTrace()));
         }
     }
