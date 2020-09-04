@@ -1,0 +1,12 @@
+// Создание таблицы
+
+DBConn
+    .getInstance()
+    .connection()
+    .prepareStatement("create TABLE USERS (\n" +
+            "    LOGIN VARCHAR(30) UNIQUE NOT NULL,\n" +
+            "    PASS VARCHAR(10) NOT NULL,\n" +
+            "    NICK VARCHAR(10) UNIQUE NOT NULL\n" +
+            ");\n").execute();
+
+//
